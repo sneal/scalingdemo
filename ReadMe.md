@@ -1,7 +1,6 @@
 # Getting Started
 
-This program has memory leaks (Bad Code) and is only used to demonstrate auto scaling in TPCF.
-Please do not use the code in production environment.
+This program is intended only to be used to demonstrate auto scaling in TPCF.
 
 
 # Scaling
