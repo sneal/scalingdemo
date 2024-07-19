@@ -25,7 +25,7 @@ public class MemoryIntensiveService {
 
     public void performMemoryIntensiveOperation() throws InterruptedException {
         List<byte[]> memoryList = new ArrayList<>();
-        int sizePerMinute = 1 * 1024 * 1024; // 1 MB in bytes
+        int sizePerMinute = 10 * 1024 * 1024; // 1 MB in bytes
         int totalSize = 0;
 
         while (true) {
@@ -36,7 +36,7 @@ public class MemoryIntensiveService {
             memoryList.add(memory);
             totalSize += sizePerMinute;
             System.out.println("Allocated total memory: " + totalSize / (1024 * 1024) + " MB");
-            Thread.sleep(60000);
+            Thread.sleep(100);
         }
     }
 }
