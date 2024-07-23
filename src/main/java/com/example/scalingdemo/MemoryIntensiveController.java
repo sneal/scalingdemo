@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.concurrent.CompletableFuture;
 
+/**
+ * MemoryIntensiveController class to handle memory intensive operations.
+ * This class demonstrates the use of a service to perform memory intensive operations asynchronously.
+ */
 @RestController
 @RequestMapping("/memory")
 public class MemoryIntensiveController {

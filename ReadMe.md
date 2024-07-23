@@ -1,6 +1,30 @@
 # Getting Started
 
-This program is intended only to be used to demonstrate auto scaling in TPCF.
+This program is designed solely to demonstrate auto-scaling in TPCF.
+
+## Technologies used:
+* Spring Boot 3.3.1
+* Java 17
+* Gradle
+* cf cli
+
+## Running the app locally
+```bash
+cd scalingdemo
+./gradlew bootRun
+```
+
+### Push the app in TP CF Platform
+```
+cd scalingdemo
+./gradlew build
+cf push
+```
+
+## Endpoints
+- /cpu **Description**: Performs a CPU-intensive operation by creating multiple threads that perform heavy computations.
+- /memory/allocate  **Description**: Starts a memory-intensive operation asynchronously, continuously allocating memory to simulate high memory usage.
+- /high_latency **Description**: High latency end point
 
 
 # Scaling
@@ -26,7 +50,7 @@ cf app scalingdemo
 cf scale scalingdemo -m NEW_MEMORY
 
 ```
-Note: Causes the app to restart.
+**Note**: Vertical scaling causes app to restart.
 
 
 # Setting Up Autoscaling for TPCF Application
@@ -39,7 +63,7 @@ Before running App Autoscaler CLI commands, you must install the App Autoscaler 
 
 ## To install the plug-in:
 
-Download the Tanzu App Autoscaler CLI plug-in from VMware Tanzu Network. Referernce document [https://docs.vmware.com/en/VMware-Tanzu-Application-Service/6.0/tas-for-vms/autoscaler-using-autoscaler-cli.html] 
+Download the Tanzu App Autoscaler CLI plug-in from VMware Tanzu Network. [Referernce document](https://docs.vmware.com/en/VMware-Tanzu-Application-Service/6.0/tas-for-vms/autoscaler-using-autoscaler-cli.html)
 
 ```bash
 cf install-plugin ~/Downloads/autoscaler-for-pcf-cliplugin-macosx64-binary-2.0.91

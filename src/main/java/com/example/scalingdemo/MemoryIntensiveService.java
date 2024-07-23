@@ -7,9 +7,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+/**
+ * MemoryIntensiveService class to perform memory intensive operations.
+ * This class demonstrates how to allocate memory continuously in an asynchronous manner.
+ */
 @Service
 public class MemoryIntensiveService {
 
+    /**
+     * Asynchronously starts a memory intensive operation.
+     * This method wraps the memory intensive operation in a CompletableFuture to run it asynchronously.
+     *
+     * @return a CompletableFuture containing a message indicating the status of the operation.
+     */
     @Async
     public CompletableFuture<String> performMemoryIntensiveOperationAsync() {
         return CompletableFuture.supplyAsync(() -> {
@@ -23,9 +33,15 @@ public class MemoryIntensiveService {
         });
     }
 
+    /**
+     * Performs the memory intensive operation by continuously allocating memory.
+     * This method allocates a specified amount of memory in a loop and prints the total allocated memory.
+     *
+     * @throws InterruptedException if the thread is interrupted while sleeping
+     */
     public void performMemoryIntensiveOperation() throws InterruptedException {
         List<byte[]> memoryList = new ArrayList<>();
-        int sizePerMinute = 10 * 1024 * 1024; // 1 MB in bytes
+        int sizePerMinute = 1 * 1024 * 1024; // 1 MB in bytes
         int totalSize = 0;
 
         while (true) {
@@ -36,7 +52,7 @@ public class MemoryIntensiveService {
             memoryList.add(memory);
             totalSize += sizePerMinute;
             System.out.println("Allocated total memory: " + totalSize / (1024 * 1024) + " MB");
-            Thread.sleep(100);
+            Thread.sleep(1000);
         }
     }
 }
