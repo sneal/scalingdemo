@@ -9,7 +9,7 @@ rules:
   - rule_type: memory
     threshold:
       min: 20
-      max: 40
+      max: 25
 #  - rule_type: cpu_entitlement
 #    threshold:
 #      min: 200

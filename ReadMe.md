@@ -14,6 +14,12 @@ cd scalingdemo
 ./gradlew bootRun
 ```
 
+
+**Note**:
+
+- The application will be pushed using settings in the provided `manifest.yml` file. The output from the command will show the URL that has been assigned to the application.
+- Edit the manifest file to change the application name to include a unique ID (May be Org Employee ID) to meet Cloud Foundry's requirement for unique app names
+
 ### Push the app in TP CF Platform
 ```
 cd scalingdemo
