@@ -20,6 +20,7 @@ public class MemoryIntensiveController {
 
     @GetMapping("/allocate")
     public CompletableFuture<String> allocateMemory() {
+        System.out.println("request received");
         return memoryIntensiveService.performMemoryIntensiveOperationAsync();
     }
 }

@@ -26,6 +26,7 @@ public class CpuController {
      */
     @GetMapping("/cpu")
     public String performCpuIntensiveOperation() {
+        System.out.println("request received");
         ExecutorService executorService = Executors.newFixedThreadPool(NUM_THREADS);
 
         for (int i = 0; i < NUM_THREADS; i++) {
@@ -34,6 +35,7 @@ public class CpuController {
                 double result = 0;
                 for (int j = 0; j < 1_000_000_000; j++) {
                     result += Math.sqrt(j);
+                    System.out.println("square root of"+j+"  is  "+result);
                 }
             });
         }

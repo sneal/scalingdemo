@@ -19,4 +19,12 @@ public class HighLatencyController {
             return "High latency operation completed";
         });
     }
+
+    @GetMapping("/simple")
+    public CompletableFuture<String> simple() {
+        return CompletableFuture.supplyAsync(() -> {
+            System.out.println("Hello World");
+            return "High latency operation completed";
+        });
+    }
 }
