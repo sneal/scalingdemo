@@ -8,15 +8,15 @@ scaling_factors:
 rules:
   - rule_type: memory
     threshold:
-      min: 20
-      max: 75
+      min: 10
+      max: 40
   - rule_type: cpu_entitlement
     threshold:
-      min: 20
-      max: 50
+      min: 40
+      max: 150
   - rule_type: http_latency
     rule_sub_type: "avg_99th"
     threshold:
       min: 80
-      max: 200
+      max: 2000
 scheduled_limit_changes: []

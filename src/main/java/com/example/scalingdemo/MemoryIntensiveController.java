@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Mono;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -19,8 +20,8 @@ public class MemoryIntensiveController {
     private MemoryIntensiveService memoryIntensiveService;
 
     @GetMapping("/allocate")
-    public CompletableFuture<String> allocateMemory() {
-        System.out.println("request received");
-        return memoryIntensiveService.performMemoryIntensiveOperationAsync();
+    public Mono<String> allocateMemory() {
+         memoryIntensiveService.performMemoryIntensiveOperationAsync();
+        return Mono.just("Memory allocated");
     }
 }

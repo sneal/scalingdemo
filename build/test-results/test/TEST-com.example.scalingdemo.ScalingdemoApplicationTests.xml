@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.scalingdemo.ScalingdemoApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-04T16:36:04" hostname="N43VCMF3LX" time="0.462">
+<testsuite name="com.example.scalingdemo.ScalingdemoApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-07T19:17:22" hostname="N43VCMF3LX" time="0.431">
   <properties/>
-  <testcase name="contextLoads()" classname="com.example.scalingdemo.ScalingdemoApplicationTests" time="0.462"/>
-  <system-out><![CDATA[12:36:03.418 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.scalingdemo.ScalingdemoApplicationTests]: ScalingdemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-12:36:03.471 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.scalingdemo.ScalingdemoApplication for test class com.example.scalingdemo.ScalingdemoApplicationTests
+  <testcase name="contextLoads()" classname="com.example.scalingdemo.ScalingdemoApplicationTests" time="0.431"/>
+  <system-out><![CDATA[14:17:21.551 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.scalingdemo.ScalingdemoApplicationTests]: ScalingdemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:17:21.602 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.scalingdemo.ScalingdemoApplication for test class com.example.scalingdemo.ScalingdemoApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,10 +14,10 @@
 
  :: Spring Boot ::                (v3.3.1)
 
-2024-08-04T12:36:03.647-04:00  INFO 63282 --- [scalingdemo] [    Test worker] c.e.s.ScalingdemoApplicationTests        : Starting ScalingdemoApplicationTests using Java 17.0.9 with PID 63282 (started by satyaagarwal in /Users/satyaagarwal/Downloads/scalingdemo)
-2024-08-04T12:36:03.647-04:00  INFO 63282 --- [scalingdemo] [    Test worker] c.e.s.ScalingdemoApplicationTests        : No active profile set, falling back to 1 default profile: "default"
-2024-08-04T12:36:04.365-04:00  INFO 63282 --- [scalingdemo] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-08-04T12:36:04.396-04:00  INFO 63282 --- [scalingdemo] [    Test worker] c.e.s.ScalingdemoApplicationTests        : Started ScalingdemoApplicationTests in 0.868 seconds (process running for 1.433)
+2024-08-07T14:17:21.755-05:00  INFO 54093 --- [scalingdemo] [    Test worker] c.e.s.ScalingdemoApplicationTests        : Starting ScalingdemoApplicationTests using Java 17.0.9 with PID 54093 (started by satyaagarwal in /Users/satyaagarwal/Downloads/scalingdemo)
+2024-08-07T14:17:21.755-05:00  INFO 54093 --- [scalingdemo] [    Test worker] c.e.s.ScalingdemoApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2024-08-07T14:17:22.522-05:00  INFO 54093 --- [scalingdemo] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-07T14:17:22.569-05:00  INFO 54093 --- [scalingdemo] [    Test worker] c.e.s.ScalingdemoApplicationTests        : Started ScalingdemoApplicationTests in 0.916 seconds (process running for 1.434)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
