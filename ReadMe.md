@@ -76,7 +76,7 @@ cf install-plugin ~/Downloads/autoscaler-for-pcf-cliplugin-macosx64-binary-2.0.9
 ```
 
 
-## Option 1: Using Autoscaler Service
+## Option 1: Using Autoscaler CLI Plugin
 
 ### Step 1: Create Autoscaler Service Instance
 
@@ -142,4 +142,42 @@ cf configure-autoscaling scalingdemo scale.yml
 ```bash
 cf autoscaling-events scalingdemo
 ```
+## Option 2: To autoscale an application using Apps Manager in Cloud Foundry, follow these steps:
+
+
+### Step 1. Log in to Apps Manager
+   Open your browser and navigate to the Apps Manager URL provided by your Cloud Foundry environment.
+   Log in using your credentials.
+### Step 2. Navigate to the Application
+   Once logged in, go to the "Applications" tab.
+   Locate and click on the application you want to autoscale.
+### Step 3. Access the Autoscaling Settings
+Click on the name of the app and go to app details page
+### Step 4. Enable Autoscaling
+   Toggle the switch or checkbox to enable autoscaling for your application.
+### Step 5. Configure Autoscaling Rules
+   Add a Rule: Click on the option to add a scaling rule.
+   Select Metric: Choose a metric to base your scaling on, such as CPU utilization, memory usage, or HTTP throughput.
+   Set Thresholds: Define the conditions for scaling up or down. For example:
+   Scale up: Increase instances if CPU utilization exceeds 70% for 5 minutes.
+   Scale down: Decrease instances if CPU utilization drops below 30% for 5 minutes.
+   Set Instance Limits: Define the minimum and maximum number of instances the application can scale to.
+   Cool Down Period: Optionally, set a cool-down period to prevent frequent scaling actions.
+### Step 6. Review and Save
+   Review your scaling rules and instance limits.
+   Click "Save" to apply the autoscaling configuration.
+### Step 7. Monitor Autoscaling
+   After enabling autoscaling, you can monitor how your application scales by returning to the application’s overview page. Here, you can see the current number of instances and scaling events.
+### Step 8. Adjust as Needed
+   If you notice that the scaling is too aggressive or not responsive enough, return to the autoscaling settings and adjust your rules accordingly.
+### Step 9. Disable Autoscaling (if needed)
+   If you need to turn off autoscaling, return to the "Autoscaling" section and toggle the switch to disable it.
+   By following these steps, you can effectively set up and manage autoscaling for your applications in Cloud Foundry using the Apps Manager.
+
+
+
+
+
+
+
 
